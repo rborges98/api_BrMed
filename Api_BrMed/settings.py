@@ -58,11 +58,11 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:8000',
+    'https://api-br-med.herokuapp.com',
 ]
 
 CORS_ORIGIN_REGEX_WHITELIST = [
-    'http://localhost:8000',
+    'https://api-br-med.herokuapp.com',
 ]
 
 ROOT_URLCONF = 'Api_BrMed.urls'
