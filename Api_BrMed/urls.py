@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from core.views import index
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/<ano>/<mes>/<dia>', index, name='index')
+    path('api/<date_url>', index, name='index')
 ]

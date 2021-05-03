@@ -2,16 +2,13 @@ import requests
 from django.http import JsonResponse
 
 
-def index(request, ano, mes, dia): #recebe o request da url e as variaveis p/ adicionar ao link da api
+def index(request, date_url): #recebe o request da url e as variaveis p/ adicionar ao link da api
 
-    try:
+
         response = requests.get(
-            'https://api.vatcomply.com/rates?date='+ano+'-'+mes+'-'+dia+'&base=BRL'
+            'https://api.vatcomply.com/rates?date='+date_url+'&base=BRL'
             )
 
-        json = response.json() #gera o json
+        json = response.json()
 
-    except:
-        json = {'error':'error'}
-
-    return JsonResponse(json) #retorna o json no endpoint
+        return JsonResponse(json) #retorna o json no endpoint
